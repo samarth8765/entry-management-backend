@@ -260,6 +260,15 @@ Example:
   }
 }
 ```
-
 - Note: `hour` values are in **UTC**. Convert to local time on the frontend if needed.
+
+
+### Seed Data
+- To seed the database with sample data, run the following command:
+
+  ```bash
+  bun seed
+  ```
+
+
 
