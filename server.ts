@@ -23,11 +23,13 @@ export const createServer = async () => {
 
   app.use(
     cors({
-      origin: ['https://entry-management-frontend.vercel.app/'],
+      origin: ['https://entry-management-frontend.vercel.app'],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       credentials: true
     })
   );
+
+  app.options('*', cors());
 
   app.use(helmet());
   app.use(express.json());
