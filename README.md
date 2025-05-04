@@ -7,6 +7,27 @@ npm install -g bun
 git clone https://github.com/samarth8765/entry-management-backend.git
 cd entry-management-backend
 bun install
+```
+
+### Environment Variables Setup
+
+Create a `.env` file in the root directory with the following variables:
+
+```env
+# MongoDB Connection
+MONGODB_URI=mongodb://localhost:27017/entry-management-system
+
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# CORS Configuration
+CORS_ORIGIN=*
+```
+
+After setting up the environment variables, start the server:
+
+```bash
 bun dev
 ```
 
