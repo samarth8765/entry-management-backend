@@ -1,905 +1,835 @@
 {
-	"info": {
-		"_postman_id": "e156ea5e-c7a6-44d2-94bc-370772d139f8",
-		"name": "Entry Management System",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "20330413"
-	},
-	"item": [
-		{
-			"name": "Person",
-			"item": [
-				{
-					"name": "Create Person",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"personName\": \"Ron\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ENDPOINT}}/person",
-							"host": [
-								"{{ENDPOINT}}"
-							],
-							"path": [
-								"person"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Create Person",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"personName\": \"Ron\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{ENDPOINT}}/person",
-									"host": [
-										"{{ENDPOINT}}"
-									],
-									"path": [
-										"person"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Resource-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "no-referrer"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-DNS-Prefetch-Control",
-									"value": "off"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-XSS-Protection",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 May 2025 08:45:22 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "195"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"c3-z+jcIdw5L8yS9xPpmefGS3wWJW4\""
-								},
-								{
-									"key": "Origin-Agent-Cluster",
-									"value": "?1"
-								},
-								{
-									"key": "X-Download-Options",
-									"value": "noopen"
-								},
-								{
-									"key": "X-Permitted-Cross-Domain-Policies",
-									"value": "none"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"personId\": \"PR-73M86C\",\n        \"name\": \"Ron\",\n        \"currentlyInside\": false,\n        \"_id\": \"6817292393ba14da9e3642e1\",\n        \"createdAt\": \"2025-05-04T08:45:23.616Z\",\n        \"updatedAt\": \"2025-05-04T08:45:23.616Z\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Persons Inside",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ENDPOINT}}/person",
-							"host": [
-								"{{ENDPOINT}}"
-							],
-							"path": [
-								"person"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get Persons Inside",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{ENDPOINT}}/person",
-									"host": [
-										"{{ENDPOINT}}"
-									],
-									"path": [
-										"person"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Resource-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "no-referrer"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-DNS-Prefetch-Control",
-									"value": "off"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-XSS-Protection",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 03 May 2025 23:46:17 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "342"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"156-Gxpg2ctoc+ecKJDUK1DLiQ/OFdo\""
-								},
-								{
-									"key": "Origin-Agent-Cluster",
-									"value": "?1"
-								},
-								{
-									"key": "X-Download-Options",
-									"value": "noopen"
-								},
-								{
-									"key": "X-Permitted-Cross-Domain-Policies",
-									"value": "none"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"meta\": {\n        \"totalCount\": 1,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6816a7ef30ceeb1c99a49744\",\n            \"personId\": \"PR-PV7HHB\",\n            \"name\": \"Anurag\",\n            \"currentlyInside\": true,\n            \"createdAt\": \"2025-05-03T23:34:07.532Z\",\n            \"updatedAt\": \"2025-05-03T23:39:34.646Z\",\n            \"lastEntry\": \"2025-05-03T23:39:34.645Z\",\n            \"lastExit\": \"2025-05-03T23:39:32.166Z\"\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Person",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ENDPOINT}}/person/:personId",
-							"host": [
-								"{{ENDPOINT}}"
-							],
-							"path": [
-								"person",
-								":personId"
-							],
-							"variable": [
-								{
-									"key": "personId",
-									"value": "PR-L68LK8"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get Person",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{ENDPOINT}}/person/:personId",
-									"host": [
-										"{{ENDPOINT}}"
-									],
-									"path": [
-										"person",
-										":personId"
-									],
-									"variable": [
-										{
-											"key": "personId",
-											"value": "PR-L68LK8"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Resource-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "no-referrer"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-DNS-Prefetch-Control",
-									"value": "off"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-XSS-Protection",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 May 2025 08:45:10 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "273"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"111-RXidLa0Fi3Ib6mdpgBb74h5wcHc\""
-								},
-								{
-									"key": "Origin-Agent-Cluster",
-									"value": "?1"
-								},
-								{
-									"key": "X-Download-Options",
-									"value": "noopen"
-								},
-								{
-									"key": "X-Permitted-Cross-Domain-Policies",
-									"value": "none"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"_id\": \"6816a718a82f306a1c787f37\",\n        \"personId\": \"PR-L68LK8\",\n        \"name\": \"Mohan\",\n        \"currentlyInside\": true,\n        \"createdAt\": \"2025-05-03T23:30:32.358Z\",\n        \"updatedAt\": \"2025-05-04T08:44:58.554Z\",\n        \"lastEntry\": \"2025-05-04T08:44:58.554Z\",\n        \"lastExit\": \"2025-05-04T08:44:57.099Z\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Person History",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ENDPOINT}}/person/:personId/history",
-							"host": [
-								"{{ENDPOINT}}"
-							],
-							"path": [
-								"person",
-								":personId",
-								"history"
-							],
-							"variable": [
-								{
-									"key": "personId",
-									"value": "PR-L68LK8"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get Person History",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{ENDPOINT}}/person/:personId/history",
-									"host": [
-										"{{ENDPOINT}}"
-									],
-									"path": [
-										"person",
-										":personId",
-										"history"
-									],
-									"variable": [
-										{
-											"key": "personId",
-											"value": "PR-L68LK8"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Resource-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "no-referrer"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-DNS-Prefetch-Control",
-									"value": "off"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-XSS-Protection",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 May 2025 08:45:04 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "2932"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"b74-HDfdbib3Dm4yLm/cF6Sl71Q/9T0\""
-								},
-								{
-									"key": "Origin-Agent-Cluster",
-									"value": "?1"
-								},
-								{
-									"key": "X-Download-Options",
-									"value": "noopen"
-								},
-								{
-									"key": "X-Permitted-Cross-Domain-Policies",
-									"value": "none"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"meta\": {\n        \"totalCount\": 13,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"limit\": 13\n    },\n    \"data\": [\n        {\n            \"_id\": \"6817290a93ba14da9e3642d5\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-04T08:44:58.549Z\",\n            \"createdAt\": \"2025-05-04T08:44:58.550Z\",\n            \"updatedAt\": \"2025-05-04T08:44:58.550Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6817290993ba14da9e3642d1\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-2\",\n            \"timestamp\": \"2025-05-04T08:44:57.078Z\",\n            \"createdAt\": \"2025-05-04T08:44:57.085Z\",\n            \"updatedAt\": \"2025-05-04T08:44:57.085Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6817106e1a72b30d6a66539c\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-4\",\n            \"timestamp\": \"2025-05-04T06:59:58.394Z\",\n            \"createdAt\": \"2025-05-04T06:59:58.395Z\",\n            \"updatedAt\": \"2025-05-04T06:59:58.395Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"681710651a72b30d6a665394\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-5\",\n            \"timestamp\": \"2025-05-04T06:59:49.846Z\",\n            \"createdAt\": \"2025-05-04T06:59:49.847Z\",\n            \"updatedAt\": \"2025-05-04T06:59:49.847Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170f6f1a72b30d6a665368\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-5\",\n            \"timestamp\": \"2025-05-04T06:55:43.799Z\",\n            \"createdAt\": \"2025-05-04T06:55:43.799Z\",\n            \"updatedAt\": \"2025-05-04T06:55:43.799Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170f641a72b30d6a66535e\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-1\",\n            \"timestamp\": \"2025-05-04T06:55:32.768Z\",\n            \"createdAt\": \"2025-05-04T06:55:32.770Z\",\n            \"updatedAt\": \"2025-05-04T06:55:32.770Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170e991a72b30d6a665323\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-04T06:52:09.897Z\",\n            \"createdAt\": \"2025-05-04T06:52:09.898Z\",\n            \"updatedAt\": \"2025-05-04T06:52:09.898Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170e381a72b30d6a6652f5\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-1\",\n            \"timestamp\": \"2025-05-04T06:50:32.224Z\",\n            \"createdAt\": \"2025-05-04T06:50:32.230Z\",\n            \"updatedAt\": \"2025-05-04T06:50:32.230Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816ae081c8bbbde825b9b07\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-04T00:00:08.227Z\",\n            \"createdAt\": \"2025-05-04T00:00:08.228Z\",\n            \"updatedAt\": \"2025-05-04T00:00:08.228Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816ae011c8bbbde825b9b03\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-2\",\n            \"timestamp\": \"2025-05-04T00:00:01.836Z\",\n            \"createdAt\": \"2025-05-04T00:00:01.836Z\",\n            \"updatedAt\": \"2025-05-04T00:00:01.836Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816adfe1c8bbbde825b9aff\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-03T23:59:58.591Z\",\n            \"createdAt\": \"2025-05-03T23:59:58.592Z\",\n            \"updatedAt\": \"2025-05-03T23:59:58.592Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816adf31c8bbbde825b9afa\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-2\",\n            \"timestamp\": \"2025-05-03T23:59:47.001Z\",\n            \"createdAt\": \"2025-05-03T23:59:47.002Z\",\n            \"updatedAt\": \"2025-05-03T23:59:47.002Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816ade61c8bbbde825b9af6\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-03T23:59:34.666Z\",\n            \"createdAt\": \"2025-05-03T23:59:34.673Z\",\n            \"updatedAt\": \"2025-05-03T23:59:34.673Z\",\n            \"__v\": 0\n        }\n    ]\n}"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Entry",
-			"item": [
-				{
-					"name": "Register Entry",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"gate\" : \"Gate-3\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n    \r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ENDPOINT}}/event/entry",
-							"host": [
-								"{{ENDPOINT}}"
-							],
-							"path": [
-								"event",
-								"entry"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Register Entry",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"gate\" : \"Gate-3\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n    \r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{ENDPOINT}}/event/entry",
-									"host": [
-										"{{ENDPOINT}}"
-									],
-									"path": [
-										"event",
-										"entry"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Resource-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "no-referrer"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-DNS-Prefetch-Control",
-									"value": "off"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-XSS-Protection",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 May 2025 08:44:58 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "241"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"f1-QZ+hu/7Y01ezz9mZ3EGSlV59+l4\""
-								},
-								{
-									"key": "Origin-Agent-Cluster",
-									"value": "?1"
-								},
-								{
-									"key": "X-Download-Options",
-									"value": "noopen"
-								},
-								{
-									"key": "X-Permitted-Cross-Domain-Policies",
-									"value": "none"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"personId\": \"PR-L68LK8\",\n        \"eventType\": \"entry\",\n        \"gate\": \"Gate-3\",\n        \"_id\": \"6817290a93ba14da9e3642d5\",\n        \"timestamp\": \"2025-05-04T08:44:58.549Z\",\n        \"createdAt\": \"2025-05-04T08:44:58.550Z\",\n        \"updatedAt\": \"2025-05-04T08:44:58.550Z\",\n        \"__v\": 0\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Register Exit",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"gate\" : \"Gate-2\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ENDPOINT}}/event/exit",
-							"host": [
-								"{{ENDPOINT}}"
-							],
-							"path": [
-								"event",
-								"exit"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Register Exit",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"gate\" : \"Gate-2\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{ENDPOINT}}/event/exit",
-									"host": [
-										"{{ENDPOINT}}"
-									],
-									"path": [
-										"event",
-										"exit"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Resource-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "no-referrer"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-DNS-Prefetch-Control",
-									"value": "off"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-XSS-Protection",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 May 2025 00:00:00 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "240"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"f0-/qEGkRBKiMSQuMB9s1wmiKiDSPE\""
-								},
-								{
-									"key": "Origin-Agent-Cluster",
-									"value": "?1"
-								},
-								{
-									"key": "X-Download-Options",
-									"value": "noopen"
-								},
-								{
-									"key": "X-Permitted-Cross-Domain-Policies",
-									"value": "none"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"personId\": \"PR-L68LK8\",\n        \"eventType\": \"exit\",\n        \"gate\": \"Gate-2\",\n        \"_id\": \"6816ae011c8bbbde825b9b03\",\n        \"timestamp\": \"2025-05-04T00:00:01.836Z\",\n        \"createdAt\": \"2025-05-04T00:00:01.836Z\",\n        \"updatedAt\": \"2025-05-04T00:00:01.836Z\",\n        \"__v\": 0\n    }\n}"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Analytics",
-			"item": [
-				{
-					"name": "Get Analytics",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ENDPOINT}}/analytics",
-							"host": [
-								"{{ENDPOINT}}"
-							],
-							"path": [
-								"analytics"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get Analytics",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{ENDPOINT}}/analytics",
-									"host": [
-										"{{ENDPOINT}}"
-									],
-									"path": [
-										"analytics"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Resource-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "no-referrer"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-DNS-Prefetch-Control",
-									"value": "off"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-XSS-Protection",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 May 2025 08:26:22 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "328"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"148-EXJglA4I+xSs8lD+UIG5NJ8vQZI\""
-								},
-								{
-									"key": "Origin-Agent-Cluster",
-									"value": "?1"
-								},
-								{
-									"key": "X-Download-Options",
-									"value": "noopen"
-								},
-								{
-									"key": "X-Permitted-Cross-Domain-Policies",
-									"value": "none"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"currentOccupancyInsideBuilding\": 2,\n        \"averageStayDuration\": 178.21371296296294,\n        \"peakEntryTime\": {\n            \"count\": 8,\n            \"hour\": 23\n        },\n        \"peakExitTime\": {\n            \"count\": 6,\n            \"hour\": 23\n        },\n        \"gateUsage\": {\n            \"entryGates\": {\n                \"Gate 1\": 6,\n                \"Gate-3\": 4,\n                \"Gate-4\": 1,\n                \"Gate-7\": 1,\n                \"Gate-5\": 1\n            },\n            \"exitGates\": {\n                \"Gate 1\": 5,\n                \"Gate-2\": 2,\n                \"Gate-1\": 2,\n                \"Gate-4\": 1,\n                \"Gate-5\": 1\n            }\n        }\n    }\n}"
-						}
-					]
-				}
-			]
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "ENDPOINT",
-			"value": "https://entry-management-api.samarthdhawan.com/api/v1",
-			"type": "string"
-		}
-	]
+  "info": {
+    "_postman_id": "e156ea5e-c7a6-44d2-94bc-370772d139f8",
+    "name": "Entry Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20330413"
+  },
+  "item": [
+    {
+      "name": "Person",
+      "item": [
+        {
+          "name": "Create Person",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"personName\": \"Ron\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ENDPOINT}}/person",
+              "host": ["{{ENDPOINT}}"],
+              "path": ["person"]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Person",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"personName\": \"Ron\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{ENDPOINT}}/person",
+                  "host": ["{{ENDPOINT}}"],
+                  "path": ["person"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 04 May 2025 08:45:22 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "195"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c3-z+jcIdw5L8yS9xPpmefGS3wWJW4\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"personId\": \"PR-73M86C\",\n        \"name\": \"Ron\",\n        \"currentlyInside\": false,\n        \"_id\": \"6817292393ba14da9e3642e1\",\n        \"createdAt\": \"2025-05-04T08:45:23.616Z\",\n        \"updatedAt\": \"2025-05-04T08:45:23.616Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Persons Inside",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ENDPOINT}}/person",
+              "host": ["{{ENDPOINT}}"],
+              "path": ["person"]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Persons Inside",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{ENDPOINT}}/person",
+                  "host": ["{{ENDPOINT}}"],
+                  "path": ["person"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 03 May 2025 23:46:17 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "342"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"156-Gxpg2ctoc+ecKJDUK1DLiQ/OFdo\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"meta\": {\n        \"totalCount\": 1,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6816a7ef30ceeb1c99a49744\",\n            \"personId\": \"PR-PV7HHB\",\n            \"name\": \"Anurag\",\n            \"currentlyInside\": true,\n            \"createdAt\": \"2025-05-03T23:34:07.532Z\",\n            \"updatedAt\": \"2025-05-03T23:39:34.646Z\",\n            \"lastEntry\": \"2025-05-03T23:39:34.645Z\",\n            \"lastExit\": \"2025-05-03T23:39:32.166Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Person",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ENDPOINT}}/person/:personId",
+              "host": ["{{ENDPOINT}}"],
+              "path": ["person", ":personId"],
+              "variable": [
+                {
+                  "key": "personId",
+                  "value": "PR-L68LK8"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Person",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{ENDPOINT}}/person/:personId",
+                  "host": ["{{ENDPOINT}}"],
+                  "path": ["person", ":personId"],
+                  "variable": [
+                    {
+                      "key": "personId",
+                      "value": "PR-L68LK8"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 04 May 2025 08:45:10 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "273"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"111-RXidLa0Fi3Ib6mdpgBb74h5wcHc\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"_id\": \"6816a718a82f306a1c787f37\",\n        \"personId\": \"PR-L68LK8\",\n        \"name\": \"Mohan\",\n        \"currentlyInside\": true,\n        \"createdAt\": \"2025-05-03T23:30:32.358Z\",\n        \"updatedAt\": \"2025-05-04T08:44:58.554Z\",\n        \"lastEntry\": \"2025-05-04T08:44:58.554Z\",\n        \"lastExit\": \"2025-05-04T08:44:57.099Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Person History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ENDPOINT}}/person/:personId/history",
+              "host": ["{{ENDPOINT}}"],
+              "path": ["person", ":personId", "history"],
+              "variable": [
+                {
+                  "key": "personId",
+                  "value": "PR-L68LK8"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Person History",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{ENDPOINT}}/person/:personId/history",
+                  "host": ["{{ENDPOINT}}"],
+                  "path": ["person", ":personId", "history"],
+                  "variable": [
+                    {
+                      "key": "personId",
+                      "value": "PR-L68LK8"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 04 May 2025 08:45:04 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2932"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b74-HDfdbib3Dm4yLm/cF6Sl71Q/9T0\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"meta\": {\n        \"totalCount\": 13,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"limit\": 13\n    },\n    \"data\": [\n        {\n            \"_id\": \"6817290a93ba14da9e3642d5\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-04T08:44:58.549Z\",\n            \"createdAt\": \"2025-05-04T08:44:58.550Z\",\n            \"updatedAt\": \"2025-05-04T08:44:58.550Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6817290993ba14da9e3642d1\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-2\",\n            \"timestamp\": \"2025-05-04T08:44:57.078Z\",\n            \"createdAt\": \"2025-05-04T08:44:57.085Z\",\n            \"updatedAt\": \"2025-05-04T08:44:57.085Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6817106e1a72b30d6a66539c\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-4\",\n            \"timestamp\": \"2025-05-04T06:59:58.394Z\",\n            \"createdAt\": \"2025-05-04T06:59:58.395Z\",\n            \"updatedAt\": \"2025-05-04T06:59:58.395Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"681710651a72b30d6a665394\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-5\",\n            \"timestamp\": \"2025-05-04T06:59:49.846Z\",\n            \"createdAt\": \"2025-05-04T06:59:49.847Z\",\n            \"updatedAt\": \"2025-05-04T06:59:49.847Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170f6f1a72b30d6a665368\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-5\",\n            \"timestamp\": \"2025-05-04T06:55:43.799Z\",\n            \"createdAt\": \"2025-05-04T06:55:43.799Z\",\n            \"updatedAt\": \"2025-05-04T06:55:43.799Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170f641a72b30d6a66535e\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-1\",\n            \"timestamp\": \"2025-05-04T06:55:32.768Z\",\n            \"createdAt\": \"2025-05-04T06:55:32.770Z\",\n            \"updatedAt\": \"2025-05-04T06:55:32.770Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170e991a72b30d6a665323\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-04T06:52:09.897Z\",\n            \"createdAt\": \"2025-05-04T06:52:09.898Z\",\n            \"updatedAt\": \"2025-05-04T06:52:09.898Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68170e381a72b30d6a6652f5\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-1\",\n            \"timestamp\": \"2025-05-04T06:50:32.224Z\",\n            \"createdAt\": \"2025-05-04T06:50:32.230Z\",\n            \"updatedAt\": \"2025-05-04T06:50:32.230Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816ae081c8bbbde825b9b07\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-04T00:00:08.227Z\",\n            \"createdAt\": \"2025-05-04T00:00:08.228Z\",\n            \"updatedAt\": \"2025-05-04T00:00:08.228Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816ae011c8bbbde825b9b03\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-2\",\n            \"timestamp\": \"2025-05-04T00:00:01.836Z\",\n            \"createdAt\": \"2025-05-04T00:00:01.836Z\",\n            \"updatedAt\": \"2025-05-04T00:00:01.836Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816adfe1c8bbbde825b9aff\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-03T23:59:58.591Z\",\n            \"createdAt\": \"2025-05-03T23:59:58.592Z\",\n            \"updatedAt\": \"2025-05-03T23:59:58.592Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816adf31c8bbbde825b9afa\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"exit\",\n            \"gate\": \"Gate-2\",\n            \"timestamp\": \"2025-05-03T23:59:47.001Z\",\n            \"createdAt\": \"2025-05-03T23:59:47.002Z\",\n            \"updatedAt\": \"2025-05-03T23:59:47.002Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6816ade61c8bbbde825b9af6\",\n            \"personId\": \"PR-L68LK8\",\n            \"eventType\": \"entry\",\n            \"gate\": \"Gate-3\",\n            \"timestamp\": \"2025-05-03T23:59:34.666Z\",\n            \"createdAt\": \"2025-05-03T23:59:34.673Z\",\n            \"updatedAt\": \"2025-05-03T23:59:34.673Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Entry",
+      "item": [
+        {
+          "name": "Register Entry",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"gate\" : \"Gate-3\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ENDPOINT}}/event/entry",
+              "host": ["{{ENDPOINT}}"],
+              "path": ["event", "entry"]
+            }
+          },
+          "response": [
+            {
+              "name": "Register Entry",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"gate\" : \"Gate-3\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n    \r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{ENDPOINT}}/event/entry",
+                  "host": ["{{ENDPOINT}}"],
+                  "path": ["event", "entry"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 04 May 2025 08:44:58 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "241"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f1-QZ+hu/7Y01ezz9mZ3EGSlV59+l4\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"personId\": \"PR-L68LK8\",\n        \"eventType\": \"entry\",\n        \"gate\": \"Gate-3\",\n        \"_id\": \"6817290a93ba14da9e3642d5\",\n        \"timestamp\": \"2025-05-04T08:44:58.549Z\",\n        \"createdAt\": \"2025-05-04T08:44:58.550Z\",\n        \"updatedAt\": \"2025-05-04T08:44:58.550Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Register Exit",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"gate\" : \"Gate-2\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ENDPOINT}}/event/exit",
+              "host": ["{{ENDPOINT}}"],
+              "path": ["event", "exit"]
+            }
+          },
+          "response": [
+            {
+              "name": "Register Exit",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"gate\" : \"Gate-2\",\r\n    \"personId\" : \"PR-L68LK8\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{ENDPOINT}}/event/exit",
+                  "host": ["{{ENDPOINT}}"],
+                  "path": ["event", "exit"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 04 May 2025 00:00:00 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "240"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f0-/qEGkRBKiMSQuMB9s1wmiKiDSPE\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"personId\": \"PR-L68LK8\",\n        \"eventType\": \"exit\",\n        \"gate\": \"Gate-2\",\n        \"_id\": \"6816ae011c8bbbde825b9b03\",\n        \"timestamp\": \"2025-05-04T00:00:01.836Z\",\n        \"createdAt\": \"2025-05-04T00:00:01.836Z\",\n        \"updatedAt\": \"2025-05-04T00:00:01.836Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "item": [
+        {
+          "name": "Get Analytics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ENDPOINT}}/analytics",
+              "host": ["{{ENDPOINT}}"],
+              "path": ["analytics"]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Analytics",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{ENDPOINT}}/analytics",
+                  "host": ["{{ENDPOINT}}"],
+                  "path": ["analytics"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 04 May 2025 08:26:22 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "328"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"148-EXJglA4I+xSs8lD+UIG5NJ8vQZI\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"currentOccupancyInsideBuilding\": 2,\n        \"averageStayDuration\": 178.21371296296294,\n        \"peakEntryTime\": {\n            \"count\": 8,\n            \"hour\": 23\n        },\n        \"peakExitTime\": {\n            \"count\": 6,\n            \"hour\": 23\n        },\n        \"gateUsage\": {\n            \"entryGates\": {\n                \"Gate 1\": 6,\n                \"Gate-3\": 4,\n                \"Gate-4\": 1,\n                \"Gate-7\": 1,\n                \"Gate-5\": 1\n            },\n            \"exitGates\": {\n                \"Gate 1\": 5,\n                \"Gate-2\": 2,\n                \"Gate-1\": 2,\n                \"Gate-4\": 1,\n                \"Gate-5\": 1\n            }\n        }\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "ENDPOINT",
+      "value": "https://entry-management-api.samarthdhawan.com/api/v1",
+      "type": "string"
+    }
+  ]
 }

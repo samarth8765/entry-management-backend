@@ -1,7 +1,7 @@
+import type { PipelineStage } from 'mongoose';
+import Event from '../model/event.model';
 import Person from '../model/person.model';
 import { EventType } from '../types/event';
-import Event from '../model/event.model';
-import type { PipelineStage } from 'mongoose';
 
 const calculateAverageStayDuration = async () => {
   // we need to match entry and exit events for each person
